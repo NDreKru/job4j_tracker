@@ -2,18 +2,10 @@ package ru.job4j.pojo;
 
 public class Library {
     public static void main(String[] args) {
-        Book lafore = new Book();
-        lafore.setName("DS and A on Java");
-        lafore.setPageCount(690);
-        Book bhargava = new Book();
-        bhargava.setName("Grokking A");
-        bhargava.setPageCount(288);
-        Book martin = new Book();
-        martin.setName("Clean code");
-        martin.setPageCount(465);
-        Book horstmann = new Book();
-        horstmann.setName("Core Java");
-        horstmann.setPageCount(866);
+        Book lafore = new Book("DS and A on Java", 690);
+        Book bhargava = new Book("Grokking A", 288);
+        Book martin = new Book("Clean code", 465);
+        Book horstmann = new Book("Core Java", 866);
         Book[] books = new Book[4];
         books[0] = lafore;
         books[1] = bhargava;
