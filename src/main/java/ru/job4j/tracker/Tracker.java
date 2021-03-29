@@ -23,11 +23,10 @@ public class Tracker {
         int resultSize = 0;
         for (int i = 0; i < size; i++) {
             if (items[i].getName().equals(key)) {
-                rsl[i] = items[i];
-                resultSize++;
+                rsl[resultSize++] = items[i];
             }
         }
-        return rsl;
+        return Arrays.copyOf(rsl, resultSize);
     }
 
     public Item findById(int id) {
