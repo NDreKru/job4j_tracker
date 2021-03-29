@@ -59,10 +59,11 @@ public class Tracker {
         boolean result = delIndex != -1;
         if (result) {
             items[delIndex] = null;
-            System.arraycopy(items, delIndex + 1, items, delIndex, size - delIndex);
+            System.arraycopy(items, delIndex + 1, items, delIndex, size - delIndex - 1);
             items[size - 1] = null;
             size--;
         }
+        System.out.println(items.length);
         return result;
     }
 }
