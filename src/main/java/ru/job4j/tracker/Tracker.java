@@ -8,10 +8,8 @@ public class Tracker {
     private int size = 0;
 
     public Item add(Item item) {
-        if (item != null) {
-            item.setId(ids++);
-            items[size++] = item;
-        }
+        item.setId(ids++);
+        items[size++] = item;
         return item;
     }
 
@@ -23,7 +21,7 @@ public class Tracker {
         Item[] rsl = new Item[size];
         int resultSize = 0;
         for (int i = 0; i < size; i++) {
-            if (items[i].getName().equals(key)) {
+            if (key != null && items[i].getName().equals(key)) {
                 rsl[resultSize++] = items[i];
             }
         }
