@@ -63,7 +63,6 @@ public class Tracker {
             items[size - 1] = null;
             size--;
         }
-        System.out.println(items.length);
         return result;
     }
 }
