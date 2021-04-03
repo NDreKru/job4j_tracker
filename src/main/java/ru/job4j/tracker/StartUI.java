@@ -98,7 +98,7 @@ public class StartUI {
                 + "3. Delete item." + System.lineSeparator()
                 + "4. Find item by Id." + System.lineSeparator()
                 + "5. Find items by name." + System.lineSeparator()
-                + "6. Exit Program." + System.lineSeparator());
+                + "6. Exit Program.");
     }
 
     public static void main(String[] args) {
