@@ -32,7 +32,7 @@ public class StartUI {
 
     public static void deleteItem(Input input, Tracker tracker) {
         System.out.println("=== Delete item ====");
-        int id = Integer.parseInt(input.askStr("Enter Id for delete: "));
+        int id = input.askInt("Enter Id for delete: ");
         if (tracker.delete(id)) {
             System.out.println("Item with Id " + id + " successfully deleted.");
         } else {
