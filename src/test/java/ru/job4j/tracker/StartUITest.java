@@ -32,7 +32,7 @@ public class StartUITest {
         Tracker tracker = new Tracker();
         Item item = new Item();
         tracker.add(item);
-        String[] answers = {"1"};
+        String[] answers = {String.valueOf(item.getId())};
         StartUI.deleteItem(new StubInput(answers), tracker);
         Item result = tracker.findById(item.getId());
         assertNull(result);
