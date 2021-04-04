@@ -10,7 +10,7 @@ public class EditAction implements UserAction {
     @Override
     public boolean execute(Input input, Tracker tracker) {
         System.out.println("=== Edit item ====");
-        int id = Integer.parseInt(input.askStr("Enter Id for edit: "));
+        int id = input.askInt("Enter Id for edit: ");
         Item item = new Item(input.askStr("Enter new name of item: "));
         if (tracker.replace(id, item)) {
             System.out.println("Item with Id " + id + " successfully edited.");
