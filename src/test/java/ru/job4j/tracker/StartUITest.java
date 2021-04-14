@@ -11,7 +11,7 @@ public class StartUITest {
     @Test
     public void whenExit() {
         Output output = new StubOutput();
-        Input input = new StubInput(new String[] {"0"});
+        Input input = new StubInput(new String[]{"0"});
         Tracker tracker = new Tracker();
         UserAction[] actions = {new ExitAction()};
         new StartUI(output).init(input, tracker, actions);
@@ -22,7 +22,7 @@ public class StartUITest {
     @Test
     public void whenFindAll() {
         Output output = new StubOutput();
-        Input input = new StubInput(new String[] {"0", "1"});
+        Input input = new StubInput(new String[]{"0", "1"});
         Tracker tracker = new Tracker();
         UserAction[] actions = {new ShowAllAction(output), new ExitAction()};
         new StartUI(output).init(input, tracker, actions);
@@ -64,5 +64,25 @@ public class StartUITest {
         assertThat(output.toString(), is(menu + "=== Find item by Id===="
                 + System.lineSeparator() + item.toString()
                 + System.lineSeparator() + menu));
+    }
+
+    @Test
+    public void whenInvalidExit() {
+        Output out = new StubOutput();
+        Input in = new StubInput(
+                new String[]{"100", "0"}
+        );
+        Tracker tracker = new Tracker();
+        UserAction[] actions = new UserAction[]{new ExitAction()};
+        new StartUI(out).init(in, tracker, actions);
+        String ln = System.lineSeparator();
+        assertThat(out.toString(), is(
+                "Menu." + ln
+                        + "0. Close program" + ln
+                        + "Wrong input, you can select: 0 - 0" + ln
+                        + "Menu." + ln
+                        + "0. Close program" + ln
+                )
+        );
     }
 }
