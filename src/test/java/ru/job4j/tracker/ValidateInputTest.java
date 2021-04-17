@@ -36,10 +36,7 @@ public class ValidateInputTest {
         String[] array = new String[]{"1", "2", "3"};
         Input in = new StubInput(array);
         ValidateInput input = new ValidateInput(out, in);
-        int[] selected = new int[array.length];
-        for (int i = 0; i < selected.length; i++) {
-            selected[i] = input.askInt("Enter menu:");
-        }
+        int[] selected = {input.askInt(""), input.askInt(""), input.askInt("")};
         assertArrayEquals(selected, new int[] {1,2,3});
     }
 
