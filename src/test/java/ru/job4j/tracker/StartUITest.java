@@ -34,7 +34,8 @@ public class StartUITest {
         String menu = "Menu." + System.lineSeparator()
                 + "0. Show all items" + System.lineSeparator()
                 + "1. Close program" + System.lineSeparator();
-        assertThat(output.toString(), is(menu + "=== List of all Items ====" + System.lineSeparator() + menu));
+        assertThat(output.toString(), is(menu + "=== List of all Items ===="
+                + System.lineSeparator() + menu));
     }
 
     @Test

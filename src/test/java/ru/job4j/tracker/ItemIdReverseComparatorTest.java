@@ -14,8 +14,8 @@ public class ItemIdReverseComparatorTest {
     @Test
     public void whenReverseOrder() {
         List<Item> list = new ArrayList<>();
-        list.add(new Item(1,"first"));
-        list.add(new Item(2,"second"));
+        list.add(new Item(1, "first"));
+        list.add(new Item(2, "second"));
         list.add(new Item(3, "third"));
         Collections.sort(list, new ItemIdReverseComparator());
         assertThat(list, is(List.of(

@@ -37,7 +37,7 @@ public class ValidateInputTest {
         Input in = new StubInput(array);
         ValidateInput input = new ValidateInput(out, in);
         int[] selected = {input.askInt(""), input.askInt(""), input.askInt("")};
-        assertArrayEquals(selected, new int[] {1,2,3});
+        assertArrayEquals(selected, new int[] {1, 2, 3});
     }
 
     @Test

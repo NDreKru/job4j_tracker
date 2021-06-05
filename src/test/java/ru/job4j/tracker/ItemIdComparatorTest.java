@@ -14,8 +14,8 @@ public class ItemIdComparatorTest {
     @Test
     public void whenNaturalOrder() {
         List<Item> list = new ArrayList<>();
-        list.add(new Item(2,"second"));
-        list.add(new Item(1,"first"));
+        list.add(new Item(2, "second"));
+        list.add(new Item(1, "first"));
         Collections.sort(list, new ItemIdComparator());
         assertThat(list, is(List.of(new Item(1, "first"), new Item(2, "second"))));
     }
