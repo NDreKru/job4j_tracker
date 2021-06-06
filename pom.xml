@@ -13,9 +13,6 @@
         <maven.compiler.source>15</maven.compiler.source>
         <maven.compiler.target>15</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <checkstyle.plugin.location>
-            C:\Users\Professional\IdeaProjects\job4j_tracker\checkstyle.xml
-        </checkstyle.plugin.location>
     </properties>
 
     <dependencies>
