@@ -29,8 +29,8 @@ public class FuncCalcTest {
     @Test
     public void whenExponentialFunctionThenExponentialResults() {
         FuncCalc fc = new FuncCalc();
-        List<Double> result = fc.diapason(1, 6, x -> Math.pow(x, x));
-        List<Double> expected = Arrays.asList(1D, 4D, 27D, 256D, 3125D);
+        List<Double> result = fc.diapason(1, 6, x -> Math.pow(2, x));
+        List<Double> expected = Arrays.asList(2D, 4D, 8D, 16D, 32D);
         assertThat(result, is(expected));
     }
 }
