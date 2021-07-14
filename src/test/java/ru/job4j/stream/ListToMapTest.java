@@ -18,12 +18,10 @@ public class ListToMapTest {
                 new Student(55, "Sidorov"),
                 new Student(80, "Ivanov"),
                 new Student(55, "Sidorov"));
-
-        Map<String, Student> expected = Map.of(
-                "Ivanov", new Student(80, "Ivanov"),
-                "Petrov", new Student(70, "Petrov"),
-                "Sidorov", new Student(55, "Sidorov"));
          ListToMap map = new ListToMap();
-         assertThat(map.listToMap(students), is(expected));
+         assertThat(map.listToMap(students), is(Map.of(
+                 "Ivanov", new Student(80, "Ivanov"),
+                 "Petrov", new Student(70, "Petrov"),
+                 "Sidorov", new Student(55, "Sidorov"))));
     }
 }
