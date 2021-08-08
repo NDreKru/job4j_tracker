@@ -6,7 +6,7 @@ public class Beam {
     private int detailNumber;
     private int assemblyNumber;
     private String prefix;
-    private byte color;
+    private int color;
 
     static class Builder {
         private String profile;
@@ -14,7 +14,7 @@ public class Beam {
         private int detailNumber;
         private int assemblyNumber;
         private String prefix;
-        private byte color;
+        private int color;
 
         Builder buildProfile(String profile) {
             this.profile = profile;
@@ -41,7 +41,7 @@ public class Beam {
             return this;
         }
 
-        Builder buildColor(byte color) {
+        Builder buildColor(int color) {
             this.color = color;
             return this;
         }
@@ -56,5 +56,27 @@ public class Beam {
             beam.color = color;
             return beam;
         }
+    }
+
+    @Override
+    public String toString() {
+        return "Beam{"
+                + "profile='" + profile + '\''
+                + ", material='" + material + '\''
+                + ", detailNumber=" + detailNumber
+                + ", assemblyNumber=" + assemblyNumber
+                + ", prefix='" + prefix + '\''
+                + ", color=" + color + '}';
+    }
+
+    public static void main(String[] args) {
+        Beam beam = new Builder().buildProfile("[14П")
+                .buildMaterial("C345")
+                .buildDetailNumber(1)
+                .buildAssemblyNumber(1)
+                .buildPrefix("Б")
+                .buildColor(5)
+                .build();
+        System.out.println(beam);
     }
 }
